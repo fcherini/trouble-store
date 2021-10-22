@@ -12,3 +12,14 @@ a {
 ul {
  list-style: none;
 }
+
+h1 {
+ color: white;
+ font-family: $nunito;
+ font-size: 15vw;
+
+ text-transform: capitalize;
+ @include breakpoint(lg) {
+  font-size: 10vw;
+ }
+}

@@ -4,7 +4,7 @@ import Img from "../../assets/img.png";
 
 const Home = () => {
   return (
-    <section>
+    <section id="home">
       <div className="home__container">
         <div className="home__text__half">
           <h1 className="home__title">

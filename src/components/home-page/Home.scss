@@ -28,9 +28,6 @@ section {
   z-index: 2;
 
   .home__title {
-   color: white;
-   font-family: $nunito;
-   font-size: 15vw;
    margin: 10vh auto 5vh auto;
 
    &__span {
@@ -42,7 +39,6 @@ section {
 
   @include breakpoint(lg) {
    .home__title {
-    font-size: 10vw;
     &__span {
      font-size: 10vw;
     }

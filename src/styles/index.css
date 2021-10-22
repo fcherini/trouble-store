@@ -16,4 +16,16 @@ ul {
   list-style: none;
 }
 
+h1 {
+  color: white;
+  font-family: "Nunito", sans-serif;
+  font-size: 15vw;
+  text-transform: capitalize;
+}
+@media (min-width: 992px) {
+  h1 {
+    font-size: 10vw;
+  }
+}
+
 /*# sourceMappingURL=index.css.map */

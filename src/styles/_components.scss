@@ -12,8 +12,20 @@ button {
 
  @include breakpoint(lg) {
   border-radius: 1vw;
-
   font-size: 2vw;
   padding: 2vw;
+ }
+}
+
+.btn-sm {
+ font-size: 3vw;
+ text-transform: uppercase;
+ letter-spacing: 0.3vw;
+ padding: 3vw;
+
+ @include breakpoint(lg) {
+  border-radius: 0.85vw;
+  font-size: 1.5vw;
+  padding: 1.5vw;
  }
 }

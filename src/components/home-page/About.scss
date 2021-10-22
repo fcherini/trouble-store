@@ -1,0 +1,55 @@
+@import "../../styles/variables";
+@import "../../styles/global";
+@import "../../styles/components";
+
+.about__container {
+ margin: 0 auto;
+ height: 100%;
+ padding: 0 2vw;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-around;
+ align-items: space-around;
+ align-content: space-around;
+
+ .about__title {
+  text-align: center;
+  margin: 0;
+  @include breakpoint(md) {
+   font-size: 10vw;
+  }
+  @include breakpoint(lg) {
+   font-size: 7vw;
+  }
+ }
+
+ .about__text {
+  color: $accentColor;
+  font-family: $pathway;
+  padding: 0 4vw;
+  margin: 0 auto;
+  max-width: $md;
+
+  @include breakpoint(xl) {
+   max-width: 70%;
+  }
+
+  p {
+   font-size: 6vw;
+
+   .about__span {
+    margin-left: 20px;
+   }
+   @include breakpoint(md) {
+    font-size: 4vw;
+   }
+   @include breakpoint(xl) {
+    font-size: 1.8vw;
+   }
+  }
+ }
+ .btn {
+  margin: 0 auto;
+  text-align: center;
+ }
+}
