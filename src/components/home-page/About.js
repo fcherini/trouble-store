@@ -27,7 +27,7 @@ function About() {
               collection to see what everyone is raving about.
             </p>
           </div>
-          <button className="btn btn-sm">2021 collection</button>
+          <button className="about__btn btn btn-sm">2021 collection</button>
         </div>
       </section>
     </div>

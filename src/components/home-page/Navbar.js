@@ -34,7 +34,7 @@ const Navbar = () => {
   }, [size.width, menuOpen]);
 
   return (
-    <nav>
+    <nav id="home__nav">
       <div className="nav__container">
         <p className="nav__logo">TROUBLE</p>
         <div

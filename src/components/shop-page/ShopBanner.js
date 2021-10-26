@@ -5,7 +5,7 @@ import Slide2 from "../../assets/slide2.png";
 
 function ShopBanner() {
   return (
-    <section>
+    <section id="shop__banner">
       <div className="banner__container">
         <img src={Slide1} alt="slide1" />
         <img src={Slide2} alt="slide1" />

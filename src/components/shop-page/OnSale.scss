@@ -1,0 +1,64 @@
+@import "../../styles/variables";
+@import "../../styles/global";
+@import "../../styles/components";
+
+#onsale {
+ background: rgba($primaryColor, 0.5);
+ width: 100vw;
+ min-height: 100vh;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ overflow: scroll;
+
+ .section__container {
+  width: 90vw;
+  max-width: $xl;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+ }
+
+ .section__title {
+  font-family: $nunito;
+  font-size: 10vw;
+  color: $secondaryColor;
+  position: relative;
+  text-align: left;
+  left: 4vw;
+  width: max-content;
+  height: max-content;
+
+  @include breakpoint(xl) {
+   font-size: 7vw;
+  }
+
+  &::before {
+   content: "On Sale.";
+   width: max-content;
+   position: absolute;
+   color: rgba($primaryColor, 0.5);
+   top: 0.9rem;
+   left: 0.9rem;
+   z-index: 2;
+  }
+ }
+}
+
+.item__container {
+ display: grid;
+ grid-template-columns: 1fr;
+ gap: 3rem;
+ padding-bottom: 3rem;
+
+ @include breakpoint(lg) {
+  grid-template-columns: 1fr 1fr;
+ }
+
+ @include breakpoint(xl) {
+  width: 80vw;
+  max-width: $xxl;
+  margin: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+ }
+}

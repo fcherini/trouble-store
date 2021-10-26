@@ -1,0 +1,56 @@
+@import "../../styles/variables";
+@import "../../styles/global";
+@import "../../styles/components";
+
+.item {
+ position: relative;
+ border: 5px solid white;
+ border-bottom: 4rem solid white;
+ width: 80vw;
+ margin: auto;
+
+ @include breakpoint(lg) {
+  width: 40vw;
+ }
+ @include breakpoint(xl) {
+  width: 20vw;
+ }
+
+ &__banner {
+  position: absolute;
+  top: 2rem;
+  left: -1rem;
+  background: $accentColor;
+  padding: 0 1rem;
+  color: white;
+  font-family: $pathway;
+  line-height: 0.1rem;
+  letter-spacing: 0.2rem;
+  p {
+   font-size: 1.3rem;
+  }
+ }
+ &__img {
+  object-fit: cover;
+  width: 100%;
+
+  @include breakpoint(xl) {
+   max-width: 40vw;
+  }
+ }
+
+ .item__title,
+ .item__price {
+  position: absolute;
+  font-family: $pathway;
+  font-size: 2rem;
+  line-height: 0rem;
+ }
+ &__title {
+  color: $primaryColor;
+ }
+ &__price {
+  right: 0;
+  color: $accentColor;
+ }
+}

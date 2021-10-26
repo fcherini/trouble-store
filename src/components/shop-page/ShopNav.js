@@ -38,7 +38,7 @@ const ShopNav = () => {
   }, [size.width, menuOpen]);
 
   return (
-    <nav>
+    <nav id="shop__nav">
       <div className="nav__container">
         <div
           className={`${"nav__links"} ${

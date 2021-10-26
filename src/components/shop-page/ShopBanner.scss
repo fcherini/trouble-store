@@ -2,7 +2,7 @@
 @import "../../styles/global";
 @import "../../styles/components";
 
-section {
+#shop__banner {
  background: rgba($secondaryColor, 0.5);
  display: flex;
  justify-content: center;
@@ -18,12 +18,18 @@ section {
  max-height: 80vh;
  margin: auto;
 
+ @include breakpoint(lg) {
+  height: 90vh;
+ }
+
  @include breakpoint(xl) {
   flex-direction: row;
+  height: fit-content;
  }
 
  img {
   max-height: 50%;
+  object-fit: cover;
 
   @include breakpoint(xl) {
    max-width: 50%;
