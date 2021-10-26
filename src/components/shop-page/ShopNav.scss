@@ -1,0 +1,112 @@
+@import "../../styles/variables";
+@import "../../styles/global";
+
+nav {
+ width: 100vw;
+ position: absolute;
+ z-index: 10;
+ margin: auto;
+ background: transparent;
+
+ @include breakpoint(xl) {
+  padding: 2rem 4rem 0 4rem;
+  margin: auto;
+  max-width: $xl;
+ }
+
+ .nav__container {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  max-width: 1920px;
+  margin: auto;
+
+  @include breakpoint(xl) {
+   padding: 1rem 2.5rem;
+  }
+
+  .nav__links {
+   top: 0;
+   right: 100%;
+   width: 100vw;
+   height: 100vh;
+   position: fixed;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 6rem;
+   background: rgba(white, 0.7);
+   backdrop-filter: blur(2px);
+   transform: translate(0);
+   transition: 0.3s ease transform;
+
+   @include breakpoint(xl) {
+    transform: none;
+    flex-direction: row;
+    background: transparent;
+    width: auto;
+    height: 100%;
+    position: static;
+    gap: 2.5rem;
+   }
+
+   a {
+    font-family: $nunito;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: $secondaryColor;
+    font-size: 5rem;
+
+    @include breakpoint(xl) {
+     font-size: 1.5rem;
+     color: white;
+    }
+   }
+  }
+  .nav__links--isMenu {
+   transform: translate(100%);
+  }
+
+  .nav__logo {
+   font-family: $pathway;
+   font-size: 3rem;
+   margin: 0;
+   color: $accentColor;
+   z-index: 1;
+  }
+
+  .nav__socials,
+  .nav__user {
+   display: flex;
+   gap: 3rem;
+  }
+
+  .nav__socials {
+   display: none;
+
+   @include breakpoint(xl) {
+    display: flex;
+   }
+  }
+
+  .nav__white__icon {
+   font-size: 2.5rem;
+   cursor: pointer;
+   color: white;
+  }
+  .nav__icon {
+   font-size: 2.5rem;
+   cursor: pointer;
+   color: $accentColor;
+   z-index: 10;
+   display: block;
+
+   @include breakpoint(xl) {
+    display: none;
+   }
+  }
+ }
+}

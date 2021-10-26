@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { Link as Anchor } from "react-scroll";
 import { Link } from "react-router-dom";
-import "./Navbar.scss";
+import "./ShopNav.scss";
 import { BiMenuAltRight } from "react-icons/bi";
-import { AiOutlineClose } from "react-icons/ai";
+import {
+  AiOutlineClose,
+  AiOutlineUser,
+  AiOutlineShoppingCart,
+} from "react-icons/ai";
+import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 
-const Navbar = () => {
+const ShopNav = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const menuToggleHandler = () => {
     setMenuOpen((p) => !p);
@@ -28,7 +32,7 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
-    if (size.width > 768 && menuOpen) {
+    if (size.width > 992 && menuOpen) {
       setMenuOpen(false);
     }
   }, [size.width, menuOpen]);
@@ -36,31 +40,30 @@ const Navbar = () => {
   return (
     <nav>
       <div className="nav__container">
-        <p className="nav__logo">TROUBLE</p>
         <div
           className={`${"nav__links"} ${
-            menuOpen && size.width < 768 ? "nav__links--isMenu" : ""
+            menuOpen && size.width < 992 ? "nav__links--isMenu" : ""
           }`}
         >
-          <Anchor
-            to="home"
-            smooth={true}
-            duration={1000}
-            onClick={menuToggleHandler}
-          >
-            home
-          </Anchor>
-          <Anchor
-            to="about"
-            smooth={true}
-            duration={1000}
-            onClick={menuToggleHandler}
-          >
-            about
-          </Anchor>
-          <Link to="/shop" onClick={menuToggleHandler}>
-            shop
+          <Link to="/2021" onClick={menuToggleHandler}>
+            2021 collection
           </Link>
+          <Link to="/tops" onClick={menuToggleHandler}>
+            tops
+          </Link>
+          <Link to="/bottoms" onClick={menuToggleHandler}>
+            bottoms
+          </Link>
+        </div>
+        <p className="nav__logo">TROUBLE</p>
+        <div className="nav__socials">
+          <FaFacebookF className="nav__white__icon" />
+          <FaInstagram className="nav__white__icon" />
+          <FaTwitter className="nav__white__icon" />
+        </div>
+        <div className="nav__user">
+          <AiOutlineUser className="nav__white__icon" />
+          <AiOutlineShoppingCart className="nav__white__icon" />
         </div>
         <>
           {menuOpen ? (
@@ -74,4 +77,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default ShopNav;

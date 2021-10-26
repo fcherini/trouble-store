@@ -1,0 +1,42 @@
+@import "../../styles/variables";
+@import "../../styles/global";
+@import "../../styles/components";
+
+section {
+ background: rgba($secondaryColor, 0.5);
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ align-content: center;
+}
+
+.banner__container {
+ display: flex;
+ position: relative;
+ flex-direction: column;
+ max-width: 90vw;
+ max-height: 80vh;
+ margin: auto;
+
+ @include breakpoint(xl) {
+  flex-direction: row;
+ }
+
+ img {
+  max-height: 50%;
+
+  @include breakpoint(xl) {
+   max-width: 50%;
+  }
+ }
+}
+
+button {
+ position: absolute;
+ bottom: -2vh;
+ left: calc(45vw - 17.5vw);
+ @include breakpoint(xl) {
+  left: calc(45vw - 10vw);
+  bottom: -3vh;
+ }
+}
