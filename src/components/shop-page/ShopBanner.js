@@ -9,7 +9,7 @@ function ShopBanner() {
       <div className="banner__container">
         <img src={Slide1} alt="slide1" />
         <img src={Slide2} alt="slide1" />
-        <button className="btn-sm">2021 collection</button>
+        <button className="banner__btn btn-sm">2021 collection</button>
       </div>
     </section>
   );
